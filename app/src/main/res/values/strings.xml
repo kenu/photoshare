@@ -2,5 +2,6 @@
     <string name="app_name">Photo Share</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="main">Main!</string>
     <string name="action_settings">Settings</string>
 </resources>
