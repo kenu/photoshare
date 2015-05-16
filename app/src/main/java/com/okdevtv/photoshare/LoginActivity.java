@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 public class LoginActivity extends ActionBarActivity {
@@ -43,6 +44,8 @@ public class LoginActivity extends ActionBarActivity {
     public void signIn(View view) {
         EditText editTextId = (EditText) findViewById(R.id.id);
         EditText editTextPassword = (EditText) findViewById(R.id.password);
+        TextView tvResult = (TextView) findViewById(R.id.result);
+
         String id = editTextId.getText().toString();
         String password = editTextPassword.getText().toString();
         Log.d(this.getLocalClassName(), "login info " + id + ", " + password);
@@ -54,6 +57,7 @@ public class LoginActivity extends ActionBarActivity {
 
         } else {
             // show wrong
+            tvResult.setText("Wrong!");
             // password reset
             editTextPassword.setText("");
         }
